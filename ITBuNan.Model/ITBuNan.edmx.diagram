@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="eb53dcd2ff4e469d91ed241009cde403" Name="Diagram1">
+        <EntityTypeShape EntityType="ITBuNanModel.Comment" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITBuNanModel.Finance" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITBuNanModel.Recommend" Width="1.5" PointX="8.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITBuNanModel.Res_Category" Width="1.5" PointX="3.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITBuNanModel.ResourceMsg" Width="1.5" PointX="6" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITBuNanModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITBuNanModel.User" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITBuNanModel.UserCollection" Width="1.5" PointX="8.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITBuNanModel.UserCollectionType" Width="1.5" PointX="3" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITBuNanModel.UserMessage" Width="1.5" PointX="3" PointY="17.625" IsExpanded="true" />
+        <AssociationConnector Association="ITBuNanModel.FK_Comment_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ITBuNanModel.FK_Finance_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ITBuNanModel.FK_Finance_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="ITBuNanModel.FK_Recommend_ResourceMsg" ManuallyRouted="false" />
+        <AssociationConnector Association="ITBuNanModel.FK_ResourceMsg_res_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="ITBuNanModel.FK_ResourceMsg_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ITBuNanModel.FK_UserCollection_ResourceMsg" ManuallyRouted="false" />
+        <AssociationConnector Association="ITBuNanModel.FK_UserCollection_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ITBuNanModel.FK_UserCollectionType_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ITBuNanModel.FK_UserMessage_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ITBuNanModel.FK_UserMessage_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="ITBuNanModel.FK_UserCollection_UserCollectionType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

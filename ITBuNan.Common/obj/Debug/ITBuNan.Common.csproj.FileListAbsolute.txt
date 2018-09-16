@@ -1,0 +1,11 @@
+J:\ITBuNan\ITBuNan.Common\bin\Debug\ITBuNan.Common.dll
+J:\ITBuNan\ITBuNan.Common\bin\Debug\ITBuNan.Common.pdb
+J:\ITBuNan\ITBuNan.Common\obj\Debug\ITBuNan.Common.csproj.CoreCompileInputs.cache
+J:\ITBuNan\ITBuNan.Common\obj\Debug\ITBuNan.Common.dll
+J:\ITBuNan\ITBuNan.Common\obj\Debug\ITBuNan.Common.pdb
+C:\Users\Administrator\Desktop\ITBuNan5\ITBuNan.Common\bin\Debug\ITBuNan.Common.dll
+C:\Users\Administrator\Desktop\ITBuNan5\ITBuNan.Common\bin\Debug\ITBuNan.Common.pdb
+C:\Users\Administrator\Desktop\ITBuNan5\ITBuNan.Common\obj\Debug\ITBuNan.Common.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\ITBuNan5\ITBuNan.Common\obj\Debug\ITBuNan.Common.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\ITBuNan5\ITBuNan.Common\obj\Debug\ITBuNan.Common.dll
+C:\Users\Administrator\Desktop\ITBuNan5\ITBuNan.Common\obj\Debug\ITBuNan.Common.pdb

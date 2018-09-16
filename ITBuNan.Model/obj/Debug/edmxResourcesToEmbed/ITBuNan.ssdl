@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ITBuNanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="comId" />
+    </Key>
+    <Property Name="comId" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="comContent" Type="varchar" MaxLength="512" Nullable="false" />
+    <Property Name="userId" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="comCretate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Finance">
+    <Key>
+      <PropertyRef Name="finId" />
+    </Key>
+    <Property Name="finId" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="finScore" Type="int" Nullable="false" />
+    <Property Name="userId" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="fin_pushUser" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="finStatus" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Recommend">
+    <Key>
+      <PropertyRef Name="recId" />
+    </Key>
+    <Property Name="recId" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="resId" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="recTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Res_Category">
+    <Key>
+      <PropertyRef Name="resCategoryId" />
+    </Key>
+    <Property Name="resCategoryId" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="resCategoryName" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="resCategoryCreate" Type="datetime" Nullable="false" />
+    <Property Name="resCategoryStatus" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ResourceMsg">
+    <Key>
+      <PropertyRef Name="resId" />
+    </Key>
+    <Property Name="resId" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="resMsg" Type="varchar" MaxLength="1024" Nullable="false" />
+    <Property Name="resUrl" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="resPwd" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="resUserId" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="resClickNum" Type="int" Nullable="false" />
+    <Property Name="resCategoryId" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="resCollectNum" Type="int" Nullable="false" />
+    <Property Name="resUploadNum" Type="int" Nullable="false" />
+    <Property Name="resCreateTime" Type="datetime" Nullable="false" />
+    <Property Name="resStatus" Type="int" Nullable="false" />
+    <Property Name="resType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="UserLoginAccount" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="UserLoginPwd" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="UserTel" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="UserCreateTime" Type="datetime" Nullable="false" />
+    <Property Name="UserIcon" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserToken" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="UserTokenExpire" Type="datetime" Nullable="false" />
+    <Property Name="UserPush" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="UserStatus" Type="int" Nullable="false" />
+    <Property Name="UserType" Type="int" Nullable="false" />
+    <Property Name="UserRemark" Type="varchar" MaxLength="512" Nullable="false" />
+    <Property Name="UserIntegration" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserCollection">
+    <Key>
+      <PropertyRef Name="ColID" />
+    </Key>
+    <Property Name="ColID" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="resID" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="ColTime" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="userColTypeID" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="userID" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserCollectionType">
+    <Key>
+      <PropertyRef Name="userColTypeID" />
+    </Key>
+    <Property Name="userColTypeID" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="userColTypeName" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="userID" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserMessage">
+    <Key>
+      <PropertyRef Name="msgID" />
+    </Key>
+    <Property Name="msgID" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="userIDSend" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="userIDReceive" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="msgContent" Type="varchar" MaxLength="1024" Nullable="false" />
+    <Property Name="msgType" Type="int" Nullable="false" />
+    <Property Name="msgCreate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Comment_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Finance_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Finance" Type="Self.Finance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Finance">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Finance_User1">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Finance" Type="Self.Finance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Finance">
+        <PropertyRef Name="fin_pushUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recommend_ResourceMsg">
+    <End Role="ResourceMsg" Type="Self.ResourceMsg" Multiplicity="1" />
+    <End Role="Recommend" Type="Self.Recommend" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResourceMsg">
+        <PropertyRef Name="resId" />
+      </Principal>
+      <Dependent Role="Recommend">
+        <PropertyRef Name="resId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceMsg_res_Category">
+    <End Role="Res_Category" Type="Self.Res_Category" Multiplicity="1" />
+    <End Role="ResourceMsg" Type="Self.ResourceMsg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Res_Category">
+        <PropertyRef Name="resCategoryId" />
+      </Principal>
+      <Dependent Role="ResourceMsg">
+        <PropertyRef Name="resCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceMsg_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="ResourceMsg" Type="Self.ResourceMsg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="ResourceMsg">
+        <PropertyRef Name="resUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserCollection_ResourceMsg">
+    <End Role="ResourceMsg" Type="Self.ResourceMsg" Multiplicity="1" />
+    <End Role="UserCollection" Type="Self.UserCollection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResourceMsg">
+        <PropertyRef Name="resId" />
+      </Principal>
+      <Dependent Role="UserCollection">
+        <PropertyRef Name="resID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserCollection_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserCollection" Type="Self.UserCollection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserCollection">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserCollection_UserCollectionType">
+    <End Role="UserCollectionType" Type="Self.UserCollectionType" Multiplicity="1" />
+    <End Role="UserCollection" Type="Self.UserCollection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserCollectionType">
+        <PropertyRef Name="userColTypeID" />
+      </Principal>
+      <Dependent Role="UserCollection">
+        <PropertyRef Name="userColTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserCollectionType_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserCollectionType" Type="Self.UserCollectionType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserCollectionType">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMessage_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserMessage" Type="Self.UserMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserMessage">
+        <PropertyRef Name="userIDSend" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMessage_User1">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserMessage" Type="Self.UserMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserMessage">
+        <PropertyRef Name="userIDReceive" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ITBuNanModelStoreContainer">
+    <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Finance" EntityType="Self.Finance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Recommend" EntityType="Self.Recommend" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Res_Category" EntityType="Self.Res_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ResourceMsg" EntityType="Self.ResourceMsg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserCollection" EntityType="Self.UserCollection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserCollectionType" EntityType="Self.UserCollectionType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserMessage" EntityType="Self.UserMessage" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Comment_User" Association="Self.FK_Comment_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Finance_User" Association="Self.FK_Finance_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Finance" EntitySet="Finance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Finance_User1" Association="Self.FK_Finance_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Finance" EntitySet="Finance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recommend_ResourceMsg" Association="Self.FK_Recommend_ResourceMsg">
+      <End Role="ResourceMsg" EntitySet="ResourceMsg" />
+      <End Role="Recommend" EntitySet="Recommend" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceMsg_res_Category" Association="Self.FK_ResourceMsg_res_Category">
+      <End Role="Res_Category" EntitySet="Res_Category" />
+      <End Role="ResourceMsg" EntitySet="ResourceMsg" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceMsg_User" Association="Self.FK_ResourceMsg_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="ResourceMsg" EntitySet="ResourceMsg" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserCollection_ResourceMsg" Association="Self.FK_UserCollection_ResourceMsg">
+      <End Role="ResourceMsg" EntitySet="ResourceMsg" />
+      <End Role="UserCollection" EntitySet="UserCollection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserCollection_User" Association="Self.FK_UserCollection_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserCollection" EntitySet="UserCollection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserCollection_UserCollectionType" Association="Self.FK_UserCollection_UserCollectionType">
+      <End Role="UserCollectionType" EntitySet="UserCollectionType" />
+      <End Role="UserCollection" EntitySet="UserCollection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserCollectionType_User" Association="Self.FK_UserCollectionType_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserCollectionType" EntitySet="UserCollectionType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMessage_User" Association="Self.FK_UserMessage_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserMessage" EntitySet="UserMessage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMessage_User1" Association="Self.FK_UserMessage_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserMessage" EntitySet="UserMessage" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
